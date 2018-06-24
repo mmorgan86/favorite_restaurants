@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Kitchen</title>
+</head>
+<style>
+
+  body {
+    background-color: rgba(166, 191, 203, 0.5);
+  }
+
+  #title {
+    text-align: center;
+    text-decoration: underline;
+    margin: 5% 0;
+  }
+
+  #back {
+    list-style: none;
+    text-align: right;
+  }
+
+  h3 {
+    margin: 0;
+  }
+/* CSS Grid set up */
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+  }
+
+/* image resize */
+  img {
+    margin: 2%;
+    width: 400px;
+    height: auto;
+  }
+
+  .link_to_favorites {
+    text-align: center;
+  }
+
+</style>
+<body>
+  <div id="back">
+
+      <a href="favorite_restaurants.html"><li>BACK</li></a>
+
+  </div>
+  <section>
+    <h1 id="title">My Homemade Favorites</h1>
+    <div>
+      <ul>
+        <li>
+          <h3>Chili and Corn Bread</h3>
+          <img src="images/chili.jpg" alt="a picture of a bowl of chili">
+        </li>
+        <li>
+          <<h3>Lasagna</h3>
+          <img src="images/Lasagna.jpg" alt="a picture of lasagna">
+        </li>
+        <li>
+          <h3>Spaghetti</h3>
+          <img src="images/Spaghetti.jpg" alt="a picture of spaghetti">
+        </li>
+        <li>
+          <h3>Chicken Fajitas</h3>
+          <img src="images/chicken_fajitas.jpg" alt="a picture of chicken fajitas">
+        </li>
+      </ul>
+    </div>
+    <div class="link_to_favorites">
+      <a href="favorite_restaurants.html"><h3>Back to my favorites</h3></a>
+    </div>
+  </section>
+
+</body>
+</html>

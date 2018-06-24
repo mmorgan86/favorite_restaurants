@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Favorite Restaurants</title>
+  <!--custom CSS style  -->
+  <style>
+/* Changes the box model from default(content box) to border-box */
+  body * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: rgba(166, 191, 203, 0.5);
+  }
+
+/* Size images  */
+    img {
+      max-height: 200px;
+      width: auto;
+    }
+
+/* style used to move bullet points with the li's */
+    ul {
+      list-style-position: inside;
+    }
+
+/* bullet points style */
+    li {
+      list-style-type: disc;
+      position: static;
+      text-align: center;
+      left: 30%;
+    }
+
+/* removes bullets from img's  */
+    .card_left > li {
+      list-style: none;
+    }
+
+/* Move favorite food bullet points and set the length for no overflow */
+    .card_right ul li {
+      position: relative;
+      text-align: left;
+      max-width: 250px;
+    }
+
+/* space between restaurants */
+    .restaurantLink {
+      margin: 10% 0;
+    }
+
+  /* Adds vertical line between restaurants */
+    .restaurantLink:nth-child(even) {
+      border-left: 1px solid gray;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+/* Style the title */
+    #title {
+      font-family: sans-serif;
+      text-transform: uppercase;
+      text-decoration: underline;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px gray;
+    }
+/* CSS grid set up */
+    .restaurant_list {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+      grid-gap: 10px;
+    }
+
+    .card_left {
+      grid-column: 1;
+    }
+
+    .card_right {
+      grid_column: 2;
+    }
+/* CSS grid end */
+
+/* Hover over image link animation */
+  a:hover img {
+    animation: image_hover 0.3s linear forwards;
+  }
+
+  @keyframes image_hover {
+    0% {
+      transform: rotate(-5deg);
+    }
+
+    50% {
+      transform: rotate(5deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+      box-shadow: 5px 5px 5px gray;
+    }
+  }
+
+/* style for small screen size....puts everyting in one column */
+    @media only screen and (max-width: 700px) {
+      .restaurant_list {
+        grid-template-columns: 1fr;
+      }
+
+      image {
+        display: block;
+        height: auto;
+        width: auto;
+      }
+    }
+
+/* Form Style */
+    form {
+      margin: 0;
+      padding-bottom: 10%;
+    }
+
+    input {
+      display: inline-block;
+      width: 15em;
+      margin-bottom: 1em;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+      margin-right:0;
+      paddiing-top: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    button {
+      margin: 2em 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">My 5 Favorite Restaurants in Raleigh</h1>
+    <ul class="restaurant_list">
+      <div class="restaurantLink">
+        <div class="card_left">
+          <li><a href="https://www.texasroadhouse.com/"><img src="https://www.foodnewsfeed.com/sites/foodnewsfeed.com/files/styles/fnf_feature_front/public/feature-images/why-texas-roadhouse-sizzling-right-now.jpg" alt="A picture of Texas Roadhouse Sign"></a></li>
+        </div>
+        <div class="card_right">
+          <h3>My favorite foods there are:</h3>
+          <ul class="favorite_food">
+            <li>Steaks</li>
+            <li>Bread and Cinnamon Butter</li>
+          </ul>
+        </div>
+      </div>
+      <div class="restaurantLink">
+        <div class="card_left">
+          <li><a href="https://www.ocharleys.com/"><img src="https://bloximages.chicago2.vip.townnews.com/herald-review.com/content/tncms/assets/v3/editorial/4/73/473a8516-d804-5d63-864e-e2ef26da5517/5a395cc7b043a.image.jpg" alt="A picture of O'Charley's logo"></a></li>
+        </div>
+        <div class="card_right">
+          <h3>My favorite foods there are:</h3>
+          <ul class="favorite_food">
+            <li>Steaks</li>
+            <li>Chicken Tenders</li>
+          </ul>
+        </div>
+      </div>
+      <div class="restaurantLink">
+        <div class="card_left">
+          <li><a href="https://www.thehickorytavern.com/locations/29/cary"><img src="https://www.americascuisine.com/siteImages/northcarolina/sandhills/HickoryLogo.png" alt="A picture of Hickory Tavern logo"></a></li>
+        </div>
+        <div class="card_right">
+          <h3>My favorite foods there are:</h3>
+          <ul class="favorite_food">
+            <li>Crab Cakes</li>
+            <li>Cheesesteaks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="restaurantLink">
+        <div class="card_left">
+          <li><a href="https://crackerbarrel.com/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Cracker_Barrel_Old_Country_Store_logo.svg/1200px-Cracker_Barrel_Old_Country_Store_logo.svg.png" alt="A picture of Cracker Barrel logo"></a></li>
+        </div>
+        <div class="card_right">
+          <h3>My favorite foods there are:</h3>
+          <ul class="favorite_food">
+            <li>Pancakes</li>
+            <li>Country Fried Chicken</li>
+          </ul>
+        </div>
+      </div>
+      <div class="restaurantLink">
+        <div class="card_left">
+          <h3>My Kitchen</h3>
+          <li><a href="my_kitchen.html" target="_self"><img src="images/kitchen1.jpg" alt="A picture of Apple Bee's logo"></a></li>
+        </div>
+        <div class="card_right">
+          <h3>My favorite foods there are:</h3>
+          <ul class="favorite_food">
+            <li>Chili and Corn Bread</li>
+            <li>Lasagna</li>
+            <li>Spaghetti</li>
+            <li>Chicken Fajitas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="restaurantLink">
+        <div class="card_left">
+          <form action="favorite_restaurants.html" method="post">
+            <h3>What are your favorite restaurants?</h3>
+            <div>
+              <label for="name">Your Full Name</label>
+              <input id="name" type="text">
+            </div>
+            <div>
+              <label for="email">Your Email:</label>
+              <input id="email" type="email">
+            </div>
+            <div>
+              <label for="food1">First Favorite:</label>
+              <input id="food1" type="text">
+            </div>
+            <div>
+              <label for="food2">Second Favorite:</label>
+              <input id="food2" type="text">
+            </div>
+            <div>
+              <label for="food3">Third Favorite:</label>
+              <input id="food3" type="text">
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </ul>
+  </div>
+</body>
+</html>
