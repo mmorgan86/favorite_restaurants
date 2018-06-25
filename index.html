@@ -119,7 +119,16 @@
         height: auto;
         width: auto;
       }
-    }
+
+  /* bullet points style */
+      li {
+        list-style-type: disc;
+        position: static;
+        text-align: center;
+        left: 15%;
+      }
+
+   }
 
 /* Form Style */
     form {
@@ -131,6 +140,11 @@
       display: inline-block;
       width: 15em;
       margin-bottom: 1em;
+    }
+
+    textarea {
+      display: inline-block;
+      width: 15em;
     }
 
     label {
@@ -215,7 +229,7 @@
       </div>
       <div class="restaurantLink">
         <div class="card_left">
-          <form action="favorite_restaurants.html" method="post">
+          <form action="favorite_restaurants.html" method="get">
             <h3>What are your favorite restaurants?</h3>
             <div>
               <label for="name">Your Full Name</label>
@@ -236,6 +250,10 @@
             <div>
               <label for="food3">Third Favorite:</label>
               <input id="food3" type="text">
+            </div>
+            <div>
+              <label for="message">Your Favorite Foods</label>
+              <textarea id="message" rows="5"></textarea>
             </div>
             <button type="submit">Submit</button>
           </form>
